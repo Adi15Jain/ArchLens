@@ -1,0 +1,28 @@
+{
+    "name": "@archlens/types",
+    "version": "0.1.0",
+    "description": "Shared type definitions for ArchLens",
+    "type": "module",
+    "exports": {
+        ".": {
+            "import": "./dist/index.js",
+            "require": "./dist/index.cjs",
+            "types": "./dist/index.d.ts"
+        }
+    },
+    "main": "./dist/index.cjs",
+    "module": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "tsup",
+        "clean": "rm -rf dist",
+        "typecheck": "tsc --noEmit"
+    },
+    "devDependencies": {
+        "tsup": "^8.3.0",
+        "typescript": "^5.7.0"
+    }
+}

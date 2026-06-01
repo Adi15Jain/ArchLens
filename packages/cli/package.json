@@ -1,0 +1,34 @@
+{
+  "name": "@archlens/cli",
+  "version": "0.1.0",
+  "description": "ArchLens Platform CLI orchestrator and runner",
+  "type": "module",
+  "bin": {
+    "archlens": "./dist/index.js"
+  },
+  "exports": { ".": { "import": "./dist/index.js", "require": "./dist/index.cjs" } },
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "clean": "rm -rf dist",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@archlens/types": "workspace:*",
+    "@archlens/shared": "workspace:*",
+    "@archlens/scanner": "workspace:*",
+    "@archlens/parser": "workspace:*",
+    "@archlens/graph": "workspace:*",
+    "@archlens/analyzer": "workspace:*",
+    "@archlens/rules": "workspace:*",
+    "@archlens/scoring": "workspace:*",
+    "@archlens/reporting": "workspace:*",
+    "citty": "^0.1.6"
+  },
+  "devDependencies": {
+    "tsup": "^8.3.0",
+    "typescript": "^5.7.0",
+    "vitest": "^3.0.0"
+  }
+}
